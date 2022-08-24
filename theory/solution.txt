@@ -1,0 +1,25 @@
+Result:
+Bad: undefined
+Bad: undefined
+Bad: undefined
+Bad: undefined
+
+Explanation: у переменных, объявленных с помощью ключевого слова var функциональная область видимости. Когда у нас начнут исполнятся макротаски - коллбеки в setTimeout - то глобальная переменная i = 4.
+
+Solution 1.
+for(let i=0; i<arr.length; i++){
+  setTimeout(function(){
+    console.log(arr[i]>13? `Good: ${arr[i]}` : `Bad: ${arr[i]}`)
+  })
+}
+
+Explanation: у переменных, объявленных с помощью ключевого слова let, в отличие от var, блочная область видимости.
+
+Solution 2.
+for(var i=0; i<arr.length; i++){
+  ((i)=>setTimeout(function(){
+    console.log(arr[i]>13? `Good: ${arr[i]}` : `Bad: ${arr[i]}`)
+  }))(i)
+}
+
+Explanation: Используем IIFE и замыкание для того, чтобы "запоминать" значение i на каждой итерации.
