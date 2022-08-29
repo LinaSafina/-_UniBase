@@ -1,0 +1,45 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  margin: 20px auto;
+  width: 70%;
+}
+
+main h2 {
+  color: red;
+  text-align: center;
+}
+
+table {
+  width: 100%;
+  border-spacing: 0;
+}
+
+thead {
+  background-color: rgb(242, 152, 152);
+}
+
+td,
+table {
+  border: 1px solid rgb(118, 116, 116);
+}
+
+tr {
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr 5fr;
+  grid-template-rows: auto;
+}
+
+.headings th {
+  font-weight: 700;
+  text-align: center;
+}
