@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practice-1</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Montserrat:wght@800&family=PT+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="modal hidden" id="modal">
+      <div class="modal__content">
+        <h2 class="sub-heading">Стать партнёром проекта</h2>
+        <div class="form__wrapper">
+          <form class="form inputs-wrapper" id="form" novalidate>
+            <div class="two-columns-2fr-1fr">
+              <div class="inputs-wrapper">
+                <div class="form-control">
+                  <label
+                    for="organization-name"
+                    class="label label_required label_inner"
+                    >Название организации</label
+                  >
+                  <input
+                    type="text"
+                    id="organization-name"
+                    class="input"
+                    required
+                  />
+                </div>
+                <div class="form-control">
+                  <label
+                    for="tel-number"
+                    class="label label_required label_inner"
+                    >Телефон</label
+                  >
+                  <input type="tel" id="tel-number" class="input" required />
+                </div>
+                <div class="form-control">
+                  <label for="e-mail" class="label label_required label_inner"
+                    >E-mail</label
+                  >
+                  <input type="email" id="e-mail" class="input" required />
+                </div>
+              </div>
+              <div class="form-control form-control_centered">
+                <label for="logo" class="label label_required label_centered"
+                  >Логотип (jpeg, png)</label
+                >
+                <div class="logo-wrapper">
+                  <div class="img_round" id="logo-img"></div>
+                  <div class="close-btn-wrapper">
+                    <button
+                      type="button"
+                      class="btn btn_round"
+                      id="logo-close-btn"
+                    >
+                      <img src="icons/close-btn.svg" />
+                    </button>
+                  </div>
+                  <input
+                    type="file"
+                    id="logo"
+                    class="input_absolute"
+                    required
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="form-control">
+              <label for="field" class="label label_required label_inner"
+                >Направление</label
+              >
+              <select id="field" class="select input" required>
+                <option disabled selected>Выбери направление</option>
+                <option value="экология">Экология</option>
+                <option value="образование">Образование</option>
+              </select>
+            </div>
+            <div class="form-control_with-icon">
+              <input type="url" id="site" class="input input_with-icon" />
+            </div>
+            <div class="form-control_with-icon">
+              <input type="url" id="vk" class="input input_with-icon" />
+            </div>
+            <div class="form-control_with-icon">
+              <input type="url" id="ok" class="input input_with-icon" />
+            </div>
+            <div class="form-control_with-icon">
+              <input type="url" id="facebook" class="input input_with-icon" />
+            </div>
+            <div class="form-control_with-icon">
+              <input type="url" id="instagram" class="input input_with-icon" />
+            </div>
+            <div class="form-control_with-icon">
+              <input type="url" id="youtube" class="input input_with-icon" />
+            </div>
+            <div class="form-control">
+              <label for="director" class="label label_inner"
+                >Руководитель</label
+              >
+              <input type="text" id="director" class="input" />
+            </div>
+            <div class="form-actions">
+              <button
+                type="submit"
+                class="btn btn_colored btn_full-width disabled"
+                id="btn-submit"
+                disabled
+              >
+                Стать партнёром проекта
+              </button>
+              <button type="button" class="btn btn_transparent" id="btn-cancel">
+                Отменить
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <main class="main">
+      <h1 class="main-heading">You can become our partner</h1>
+      <button class="btn btn_colored" id="btn-join">Join</button>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

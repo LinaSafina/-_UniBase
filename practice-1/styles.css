@@ -1,0 +1,291 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  font-family: 'PT Sans', sans-serif;
+  color: #0c1014;
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 990;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.42);
+}
+
+.modal__content {
+  padding: 53px 98px;
+  width: 754px;
+  border-radius: 12px;
+  z-index: 999;
+  position: absolute;
+  top: 101px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+}
+
+.sub-heading {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size: 28px;
+  line-height: 34px;
+  color: inherit;
+  margin: 0;
+}
+
+.form__wrapper {
+  margin: 35px 0 0;
+}
+
+.inputs-wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 32px;
+}
+
+.form {
+  width: 100%;
+}
+
+.two-columns-2fr-1fr {
+  display: flex;
+  justify-content: space-between;
+}
+
+.two-columns-2fr-1fr .inputs-wrapper {
+  flex-basis: 65%;
+}
+
+.form-control {
+  position: relative;
+}
+
+.form-control_centered {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 7px;
+}
+
+.label {
+  font-size: 12px;
+  line-height: 16px;
+  color: #6a6e72;
+}
+
+.label_inner {
+  position: absolute;
+  padding-top: 8px;
+  left: 16px;
+}
+
+.label_required {
+  padding-left: 15px;
+}
+
+.label_required::before {
+  content: '*';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  color: #d90000;
+  font-size: 25px;
+  transform: rotateZ(30deg);
+}
+
+.label_required.label_centered::before {
+  top: 6px;
+  left: 15%;
+}
+
+.input {
+  width: 100%;
+  border: 1px solid #d6dade;
+  border-radius: 2px;
+  color: inherit;
+  font-size: 16px;
+  line-height: 24px;
+  padding: 16px;
+}
+
+.label_inner + .input {
+  padding-top: 22px;
+  padding-bottom: 8px;
+}
+
+#logo {
+  position: absolute;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  top: 20%;
+  width: 80%;
+  color: transparent;
+}
+
+#logo::-webkit-file-upload-button {
+  visibility: hidden;
+}
+
+.logo-wrapper {
+  position: relative;
+  width: 163px;
+  height: 163px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img_round {
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  background-color: #6a6e72;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  overflow: hidden;
+}
+
+.input-wrapper {
+  width: 163px;
+  height: 163px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#logo::after {
+  content: 'Выберите \0a файл';
+  text-decoration: underline;
+  font-size: 18.6667px;
+  line-height: 28px;
+  white-space: pre;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#logo::before {
+  content: url(icons/file-download.svg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-actions {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 15px;
+}
+
+.btn_colored {
+  font-family: 'Lato', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 18px;
+  text-align: center;
+  color: white;
+  background: #e5266e;
+  border-color: #e5266e;
+  border-radius: 4px;
+  padding: 14px 20px 16px;
+}
+
+.btn_full-width {
+  width: 100%;
+}
+
+.btn_transparent {
+  font-size: 16px;
+  line-height: 24px;
+  color: #0848c0;
+  background: transparent;
+  border: none;
+}
+
+#site {
+  background-image: url(icons/site.svg);
+}
+
+#vk {
+  background-image: url(icons/vk.svg);
+}
+
+#instagram {
+  background-image: url(icons/Instagram.svg);
+}
+
+#youtube {
+  background-image: url(icons/youtube\ 2.svg);
+}
+
+#facebook {
+  background-image: url(icons/facebook.svg);
+}
+
+#ok {
+  background-image: url(icons/ok.svg);
+}
+
+.input_with-icon {
+  background: no-repeat scroll 7px 7px;
+  background-position: center;
+  background-position-x: calc(100% - 16px);
+}
+
+.btn_round {
+  border: transparent;
+  border-radius: 50%;
+  width: 36.17px;
+  height: 36.17px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+
+.close-btn-wrapper {
+  position: absolute;
+  z-index: 1;
+  right: 2.33px;
+  top: 9.33px;
+}
+
+.btn {
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+.btn[disabled] {
+  cursor: auto;
+  opacity: 0.5;
+}
