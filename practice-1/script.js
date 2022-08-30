@@ -127,6 +127,7 @@ function validateFormOnChange(e) {
 
     input.addEventListener('change', (event) => {
       validateInput(input);
+      addErrorStyles(id, input);
     });
   });
 }
@@ -197,4 +198,12 @@ function validateInput(input) {
   }
 
   isFormValid();
+}
+
+function addErrorStyles(inputId, input) {
+  if (error[inputId] === STATUS.ERROR) {
+    input.style.borderColor = 'red';
+  } else {
+    input.style.borderColor = '#d6dade';
+  }
 }
